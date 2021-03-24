@@ -44,9 +44,9 @@ const arrayInstrumentations: Record<string, Function> = {}
 // instrument identity-sensitive Array methods to account for possible reactive
 // values
 ;(['includes', 'indexOf', 'lastIndexOf'] as const).forEach(key => {
-  const method = Array.prototype[key] as any
   arrayInstrumentations[key] = function(this: unknown[], ...args: unknown[]) {
     const arr = toRaw(this)
+    const method = arr[key] as any
     for (let i = 0, l = this.length; i < l; i++) {
       track(arr, TrackOpTypes.GET, i + '')
     }
@@ -63,8 +63,8 @@ const arrayInstrumentations: Record<string, Function> = {}
 // instrument length-altering mutation methods to avoid length being tracked
 // which leads to infinite loops in some cases (#2137)
 ;(['push', 'pop', 'shift', 'unshift', 'splice'] as const).forEach(key => {
-  const method = Array.prototype[key] as any
   arrayInstrumentations[key] = function(this: unknown[], ...args: unknown[]) {
+    const method = toRaw(this)[key] as any
     pauseTracking()
     const res = method.apply(this, args)
     resetTracking()

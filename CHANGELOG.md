@@ -1,3 +1,12 @@
+## [3.0.71](https://github.com/gedzeppelin/vue-next/compare/v3.0.7...v3.0.71) (2021-03-24)
+
+
+### Bug Fixes
+
+* **reactivity:** enable proxy on arrays ([07d2115](https://github.com/gedzeppelin/vue-next/commit/07d21150a3bf85eacde84d724eb2109ce6965592))
+
+
+
 ## [3.0.7](https://github.com/vuejs/vue-next/compare/v3.0.6...v3.0.7) (2021-03-01)
 
 

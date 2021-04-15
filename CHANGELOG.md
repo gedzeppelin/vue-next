@@ -1,13 +1,11 @@
-## [3.0.101](https://github.com/gedzeppelin/vue-next/compare/v3.0.10...v3.0.101) (2021-03-31)
-
-
-
-## [3.0.71](https://github.com/gedzeppelin/vue-next/compare/v3.0.7...v3.0.71) (2021-03-24)
+## [3.0.11](https://github.com/vuejs/vue-next/compare/v3.0.10...v3.0.11) (2021-04-01)
 
 
 ### Bug Fixes
 
-* **reactivity:** enable proxy on arrays ([07d2115](https://github.com/gedzeppelin/vue-next/commit/07d21150a3bf85eacde84d724eb2109ce6965592))
+* **compiler-sfc:** fix wrong scopeId for nested `<script setup>` components ([7f7dcc9](https://github.com/vuejs/vue-next/commit/7f7dcc9f7d9a036df366453e2bf228f29c0bef82))
+* **runtime-core:** fix render function + optimized slot edge case ([#3523](https://github.com/vuejs/vue-next/issues/3523)) ([995d76b](https://github.com/vuejs/vue-next/commit/995d76bd128c3f4d264f10212f2a8e8946f58a62)), closes [#2893](https://github.com/vuejs/vue-next/issues/2893)
+* **runtime-core:** fix v-on object kebab-case event emit matching ([c1cd42e](https://github.com/vuejs/vue-next/commit/c1cd42e627bdeb561d54e64ea5fea87ccbbae637)), closes [#3527](https://github.com/vuejs/vue-next/issues/3527)
 
 
 

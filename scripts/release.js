@@ -15,7 +15,7 @@ const skipTests = args.skipTests
 const skipBuild = args.skipBuild
 const packages = fs
   .readdirSync(path.resolve(__dirname, '../packages'))
-  .filter(p => !p.endsWith('.ts') && !p.startsWith('.'))
+  .filter(p => !p.endsWith('.ts') && !p.startsWith('.') && p.includes('compat'))
 
 const skippedPackages = []
 
